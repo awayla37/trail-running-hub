@@ -1,0 +1,28 @@
+[
+  {
+    "brand": "La Sportiva",
+    "model": "Ultra Raptor",
+    "weight_g": 260,
+    "drop_mm": 8,
+    "stack_height": "33/29mm",
+    "midsole_tech": "EVA",
+    "outsole_tech": "Vibram Mega-Grip",
+    "lug_depth_mm": 5,
+    "rock_plate": true,
+    "upper_material": "Mesh",
+    "performance_tags": { "traction": 5, "protection": 4, "cushioning": 4, "responsiveness": 4 }
+  },
+  {
+    "brand": "Salomon",
+    "model": "Speedcross 5",
+    "weight_g": 290,
+    "drop_mm": 10,
+    "stack_height": "33/29mm",
+    "midsole_tech": "EnergyCell+",
+    "outsole_tech": "Contagrip",
+    "lug_depth_mm": 5,
+    "rock_plate": false,
+    "upper_material": "Mesh",
+    "performance_tags": { "traction": 5, "protection": 3, "cushioning": 3, "responsiveness": 4 }
+  }
+]

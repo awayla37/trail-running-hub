@@ -22,3 +22,40 @@
 * `/src/data`: 核心 Schema 定义与 Mock 数据（含赛道地形数据）。
 * `/src/logic`: 存储百分制匹配引擎的权重算法与计算逻辑。
 * `/src/components`: 专业 UI 组件（如评分雷达图、参数对比表）。
+
+## 开发者快速预览
+在 `src/logic/scoring-engine.ts` 中实现：
+- `computeTrailShoeScore(shoe, terrain)`
+- `rankShoesForTerrain(shoes, terrain)`
+
+示例：
+```ts
+import { sampleRun } from './src/logic/scoring-engine';
+const ranking = sampleRun();
+console.log(ranking);
+```
+
+测试：
+1. 通过 `ts-node` (若已安装) 直接运行：
+   - `npx ts-node src/logic/scoring-engine.test.ts`
+   - `npx ts-node src/logic/race-recommender.test.ts`
+   - `npx ts-node src/logic/run-main.ts`  // 运行简洁推荐演示
+   - `npx ts-node src/logic/run-detailed.ts [raceId] [limit]`  // 运行可带明细解释的推荐演示
+2. 如果你使用 Next.js 项目，也可把 `src/logic` 导入到前端页面，在浏览器控制台查看结果。
+
+## UI 已完成（Next.js App Router）
+当前已新增：
+- `src/components/RaceRecommendationWidget.tsx`
+- `src/app/page.tsx`
+
+功能拓展：
+- 赛道选择、最小总分过滤、品牌模糊过滤
+- 地形权重可调（泥地/岩石/碎石/硬地）
+- 权重保存到 LocalStorage，自动加载
+- Top4 雷达图对比（Recharts）
+- 装备库 CRUD（新增/删除），保存在 LocalStorage
+- 导出推荐结果 CSV
+- 中英语言切换
+- 单鞋分项 + 解释原因 
+
+运行：`npm run dev`（或 `pnpm dev`）后访问首页即可看到 UI。

@@ -2,7 +2,6 @@
   {
     "raceId": "xtrail-2026",
     "name": "长城越野100",
-    "distance_km": 100,
     "terrain": {
       "mud": 25,
       "technical_rock": 40,
@@ -13,26 +12,13 @@
   },
   {
     "raceId": "river-valley-50k",
-    "name": "河谷越野50K",
-    "distance_km": 50,
+    "name": "河谷50公里",
     "terrain": {
       "mud": 10,
       "technical_rock": 15,
       "gravel": 40,
       "hardpack": 35,
       "elevation_gain_pct": 8
-    }
-  },
-  {
-    "raceId": "alpine-scramble-40",
-    "name": "高山穿越40K",
-    "distance_km": 40,
-    "terrain": {
-      "mud": 15,
-      "technical_rock": 50,
-      "gravel": 10,
-      "hardpack": 25,
-      "elevation_gain_pct": 25
     }
   }
 ]
