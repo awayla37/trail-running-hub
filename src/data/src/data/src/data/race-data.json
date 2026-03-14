@@ -1,0 +1,14 @@
+[
+  {
+    "id": "nh100",
+    "name": "Ninghai UTMB 100K",
+    "location": "Zhejiang, China",
+    "terrain_profile": {
+      "mud": 0.3,
+      "technical_rock": 0.4,
+      "hard_packed": 0.3
+    },
+    "climb_m": 4500,
+    "mandatory_kit_level": "Elite"
+  }
+]
