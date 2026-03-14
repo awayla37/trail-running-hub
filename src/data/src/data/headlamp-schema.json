@@ -1,0 +1,11 @@
+{
+  "category": "Headlamp",
+  "specs": {
+    "max_lumens": 0,
+    "beam_distance_m": 0,
+    "battery_type": "string",
+    "burn_time_max_hrs": 0,
+    "weight_with_battery_g": 0,
+    "waterproof_rating": "IPX8"
+  }
+}
