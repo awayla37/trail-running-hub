@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
 import './globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Trail Hub - Professional Trail Running Dashboard',
-  description: 'Digital gear management and intelligent race recommendations for trail running enthusiasts',
+  title: 'Trail Hub Engine',
+  description: '专业越野跑装备评分系统',
 }
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="zh">
       <body>{children}</body>
     </html>
   )

@@ -1,0 +1,26 @@
+[
+  { 
+    "id": "1", 
+    "name": "崇礼168 - UTC", 
+    "lat": 40.9, "lon": 115.3,
+    "distance": 168, "technical_level": 4
+  },
+  { 
+    "id": "2", 
+    "name": "济州岛 - UTMB", 
+    "lat": 33.3, "lon": 126.5,
+    "distance": 100, "technical_level": 2
+  },
+  { 
+    "id": "3", 
+    "name": "宁海越野 - CNH", 
+    "lat": 29.3, "lon": 121.4,
+    "distance": 60, "technical_level": 3
+  },
+  { 
+    "id": "4", 
+    "name": "四姑娘山 - UTMS", 
+    "lat": 31.1, "lon": 102.9,
+    "distance": 35, "technical_level": 5
+  }
+]
