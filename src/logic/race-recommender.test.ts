@@ -1,5 +1,5 @@
 import assert from "assert";
-import { recommendationForRace } from "./race-recommender";
+import { recommendShoesForRace } from "./race-recommender";
 import { TrailShoe } from "./scoring-engine";
 
 const shoes: TrailShoe[] = [
@@ -29,7 +29,7 @@ const shoes: TrailShoe[] = [
   },
 ];
 
-const result = recommendationForRace(shoes, "xtrail-2026", 2);
+const result = recommendShoesForRace(shoes, "xtrail-2026", 2);
 console.log(result);
 assert(result.race.raceId === "xtrail-2026");
 assert(result.recommendations.length === 2);

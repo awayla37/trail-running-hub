@@ -1,18 +1,39 @@
-export const calculateMatchScore = (race: any, gear: any, environment: { wetness: number }) => {
-  if (!gear || !race) return 0;
-  let base = 70;
-  
-  if (gear.category === 'shoes') {
-    const lugDepth = gear.specifications?.lug_depth || 4;
-    const gripBase = gear.score_dimensions?.grip || 80;
-    const slipperyPenalty = (environment.wetness / 100) * (6 - lugDepth) * 8;
-    const technicalImpact = (race.technical_level || 3) * 5;
-    base = gripBase + (lugDepth * 2) + technicalImpact - slipperyPenalty;
-  } else if (gear.category === 'poles') {
-    const portability = gear.score_dimensions?.portability || 80;
-    const climbingWeight = (race.elevation || 2000) / 10000;
-    base = portability + (climbingWeight * 20);
-  }
-  
-  return Math.min(Math.max(Math.round(base), 0), 100);
-};
+export interface ScoringConfig {
+  mudWeight: number;
+  technicalWeight: number;
+  gravelWeight: number;
+  hardpackWeight: number;
+}
+
+export interface TerrainProfile {
+  mud: number;
+  technical_rock: number;
+  gravel: number;
+  hardpack: number;
+  elevation_gain_pct: number;
+}
+
+export interface TrailShoe {
+  id: string;
+  name: string;
+  brand: string;
+  specifications: {
+    lug_depth: number;
+    weight?: number;
+    stack_height?: number;
+  };
+  score_dimensions: {
+    grip: number;
+    durability: number;
+    cushion?: number;
+  };
+}
+
+export function rankShoesForTerrain(shoes: TrailShoe[], terrain: TerrainProfile) {
+  return shoes.map(shoe => {
+    // 基础评分逻辑：抓地力权重随地形湿滑度/技术难度增加
+    const gripScore = shoe.score_dimensions.grip * (terrain.mud * 1.5 + terrain.technical_rock * 1.2) / 100;
+    const finalScore = Math.min(100, 70 + gripScore);
+    return { ...shoe, finalScore };
+  }).sort((a, b) => b.finalScore - a.finalScore);
+}
