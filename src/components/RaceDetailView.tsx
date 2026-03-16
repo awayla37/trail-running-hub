@@ -1,52 +1,59 @@
-'use client';
-
 import React from 'react';
-import { Mountain, Map, Activity, ChevronLeft } from 'lucide-react';
+import { ArrowLeft, MapPin, Zap, TrendingUp } from 'lucide-react';
+import ElevationChart from './ElevationChart';
 
-export default function RaceDetailView({ race, onBack }: { race: any, onBack: () => void }) {
+interface Props {
+  race: any;
+  onBack: () => void;
+}
+
+export default function RaceDetailView({ race, onBack }: Props) {
   return (
-    <div className="space-y-6 animate-in slide-in-from-right-4 duration-500">
-      <div className="flex items-center gap-2 text-gray-400 hover:text-emerald-500 cursor-pointer transition-all" onClick={onBack}>
-        <ChevronLeft size={16} /> <span className="text-xs font-bold uppercase">返回赛事列表</span>
-      </div>
+    <div className="animate-in fade-in zoom-in-95 duration-500">
+      <button onClick={onBack} className="flex items-center gap-2 text-gray-500 hover:text-white mb-6 transition-colors">
+        <ArrowLeft size={16} />
+        <span className="text-[10px] font-black uppercase tracking-widest">Back to List</span>
+      </button>
 
-      <div className="bg-emerald-600/10 border border-emerald-500/20 p-6 rounded-xl">
-        <h3 className="text-2xl font-black italic uppercase text-emerald-500">{race.name}</h3>
-        <p className="text-sm text-gray-400 mt-1">{race.location}</p>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4">
-        <div className="bg-white/5 p-4 rounded-lg border border-gray-800 text-center">
-          <Map className="mx-auto mb-2 text-gray-500" size={20} />
-          <p className="text-[10px] text-gray-500 uppercase">距离</p>
-          <p className="text-lg font-mono font-bold">{race.distance}k</p>
-        </div>
-        <div className="bg-white/5 p-4 rounded-lg border border-gray-800 text-center">
-          <Mountain className="mx-auto mb-2 text-gray-500" size={20} />
-          <p className="text-[10px] text-gray-500 uppercase">爬升</p>
-          <p className="text-lg font-mono font-bold">{race.elevation}m</p>
-        </div>
-        <div className="bg-white/5 p-4 rounded-lg border border-gray-800 text-center">
-          <Activity className="mx-auto mb-2 text-gray-500" size={20} />
-          <p className="text-[10px] text-gray-500 uppercase">技术难度</p>
-          <p className="text-lg font-mono font-bold">LV.{race.technical_level}</p>
-        </div>
-      </div>
-
-      <div className="p-4 bg-white/5 rounded-lg border border-gray-800">
-        <h4 className="text-xs font-bold text-emerald-500 uppercase mb-3">100分制评估建议</h4>
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <span className="text-xs text-gray-400">抓地力需求 (Grip Weight)</span>
-            <div className="h-1.5 w-24 bg-gray-800 rounded-full overflow-hidden">
-              <div className="h-full bg-emerald-500" style={{ width: `${race.technical_level * 20}%` }}></div>
+      <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-emerald-500/10 to-transparent border border-white/5 p-8">
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <h2 className="text-3xl font-black italic uppercase text-white tracking-tighter mb-2">{race.name}</h2>
+            <div className="flex items-center gap-4">
+               <span className="flex items-center gap-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                 <MapPin size={12} className="text-emerald-500" /> Terrain: Technical
+               </span>
+               <span className="flex items-center gap-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                 <TrendingUp size={12} className="text-emerald-500" /> Gain: {race.elevation}m
+               </span>
             </div>
           </div>
-          <div className="flex justify-between items-center">
-            <span className="text-xs text-gray-400">轻量化需求 (Weight Priority)</span>
-            <div className="h-1.5 w-24 bg-gray-800 rounded-full overflow-hidden">
-              <div className="h-full bg-blue-500" style={{ width: `${race.distance > 100 ? '90%' : '50%'}` }}></div>
+          <div className="px-4 py-2 bg-emerald-500 text-black rounded-full font-black text-xs italic">
+            {race.distance}KM
+          </div>
+        </div>
+
+        <p className="text-gray-400 text-xs leading-relaxed mb-6 font-medium">
+          {race.description || "No official data available for this sector. Advanced AI analysis recommended for personalized strategy."}
+        </p>
+
+        {/* 插入高度曲线组件 */}
+        {race.elevation_points && (
+          <ElevationChart points={race.elevation_points} />
+        )}
+
+        <div className="grid grid-cols-2 gap-4 mt-8">
+          <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+            <p className="text-[9px] font-black text-gray-600 uppercase mb-1">Tech Level</p>
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className={`h-1.5 flex-1 rounded-full ${i < race.technical_level ? 'bg-emerald-500' : 'bg-white/10'}`}></div>
+              ))}
             </div>
+          </div>
+          <div className="p-4 bg-white/5 rounded-2xl border border-white/5 text-right">
+            <p className="text-[9px] font-black text-gray-600 uppercase mb-1">Recommended Lugs</p>
+            <p className="text-white font-black italic text-sm">4.5mm+</p>
           </div>
         </div>
       </div>

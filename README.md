@@ -1,20 +1,19 @@
 # 🏔️ Trail Gear Hub - Pro Edition
 
-Trail Gear Hub 是一个专为越野跑爱好者设计的硬核工具，旨在通过科学的算法逻辑，帮助跑者针对特定赛事选择最合适的装备。
+Trail Gear Hub 是一个专为越野跑者打造的“赛前决策与赛后复盘”中心。通过硬核数据与 AI 算法，帮助跑者在复杂地形中选择最优装备。
 
 ## 🌟 核心功能
-- **智能评分系统**：基于赛道技术难度、地形及环境湿度的 100 分制算法。
-- **VS 对抗模式**：支持多件装备横向评测，直观展示性能差异。
-- **环境模拟器**：实时调节赛道湿度，评估装备在极端天气下的表现。
-- **专业报告导出**：一键生成高分辨率 PNG 评估报告，方便社交分享。
-- **持久化装备柜**：本地存储录入的鞋履与登山杖数据，随时调用。
+- **智能评分引擎 (v2.0)**：动态关联实时天气、地形坡度与装备物理规格。
+- **AI 路线解析**：利用自然语言处理（NLP）识别非结构化路况描述，自动生成地形参数。
+- **VS 模式**：双装备横向性能对比与风险预警。
+- **Strava 联动 (规划中)**：同步训练里程，监控装备磨损生命周期。
 
-## 📂 技术栈
-- **Framework**: Next.js (React)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Logic**: Custom TypeScript Scoring Engine
-- **Export**: html2canvas
+## 🛠️ 技术栈 (Tech Stack)
+- **Frontend**: Next.js (React), Tailwind CSS, Framer Motion
+- **AI Integration**: GPT-4o / Claude 3.5 API
+- **Maps**: Mapbox GL JS (3D Terrain)
+- **Backend**: Supabase (PostgreSQL, Auth, Storage)
+- **Data Source**: Open-Meteo API, Strava API
 
 ---
-*Keep Learning, Keep Running.*
+**Data-Led, Mountain-Bred.**
