@@ -180,17 +180,6 @@ AI负责识别
 
 ---
 
-## 💻 Local Development（本地开发）
-
-git clone https://github.com/yourname/trail-hub.git
-cd trail-hub
-npm install
-npm run dev
-
-Open http://localhost:3000
-
----
-
 ## 🤝 Contributing
 
 This is an early-stage project.
