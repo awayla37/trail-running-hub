@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chongli-168-dtc", "name": "崇礼168 UTC", "location": "张家口崇礼", "country": "中国",
+    "distance_km": 168, "elevation_gain_m": 8800, "difficulty": "hard",
+    "features": ["高海拔挑战", "昼夜温差大", "草甸碎石", "长距离"],
+    "elevation_profile": [1500, 2100, 1600, 2300, 1800, 2500, 1400],
+    "weather": { "temp": "5°C / -8°C", "condition": "大风/可能降雪", "wind": "35km/h" },
+    "cut_off_hours": 48,
+    "terrain_distribution": { "paved": 5, "dirt": 45, "single_track": 35, "technical": 15 }
+  },
+  {
+    "id": "dajingmen-utmb", "name": "大境门 UTMB (MSD)", "location": "张家口大境门", "country": "中国",
+    "distance_km": 100, "elevation_gain_m": 5200, "difficulty": "hard",
+    "features": ["技术路段", "锋利岩石", "古长城遗址"],
+    "elevation_profile": [800, 1500, 900, 1800, 1100, 1600, 800],
+    "weather": { "temp": "12°C / 2°C", "condition": "干燥/晴朗", "wind": "15km/h" },
+    "cut_off_hours": 26,
+    "terrain_distribution": { "paved": 10, "dirt": 20, "single_track": 40, "technical": 30 }
+  },
+  {
+    "id": "gangbagaoka-50", "name": "岗巴嘎卡 50K", "location": "甘南藏族自治州", "country": "中国",
+    "distance_km": 50, "elevation_gain_m": 2100, "difficulty": "easy",
+    "features": ["极致高海拔", "绝美风光", "高山草甸"],
+    "elevation_profile": [2800, 3200, 3100, 3600, 2900, 3000, 2800],
+    "weather": { "temp": "8°C / -2°C", "condition": "强紫外线", "wind": "25km/h" },
+    "cut_off_hours": 12,
+    "terrain_distribution": { "paved": 5, "dirt": 15, "single_track": 70, "technical": 10 }
+  },
+  {
+    "id": "jiangnan-100", "name": "江南 100", "location": "宁波奉化", "country": "中国",
+    "distance_km": 100, "elevation_gain_m": 5800, "difficulty": "hard",
+    "features": ["竹林湿滑", "台阶多", "湿热环境"],
+    "elevation_profile": [50, 600, 100, 800, 200, 700, 50],
+    "weather": { "temp": "25°C / 18°C", "condition": "暴雨/高湿度", "wind": "10km/h" },
+    "cut_off_hours": 30,
+    "terrain_distribution": { "paved": 15, "dirt": 35, "single_track": 25, "technical": 25 }
+  },
+  {
+    "id": "huangshan-trail", "name": "黄山越野赛 (30K)", "location": "黄山风景区", "country": "中国",
+    "distance_km": 30, "elevation_gain_m": 2300, "difficulty": "easy",
+    "features": ["台阶地狱", "花岗岩路面", "观光赛道"],
+    "elevation_profile": [400, 1200, 1600, 1800, 1500, 1000, 400],
+    "weather": { "temp": "15°C / 8°C", "condition": "大雾", "wind": "5km/h" },
+    "cut_off_hours": 9,
+    "terrain_distribution": { "paved": 20, "dirt": 10, "single_track": 40, "technical": 30 }
+  }
+]

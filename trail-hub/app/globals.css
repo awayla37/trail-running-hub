@@ -1,0 +1,8 @@
+/* 引入 Tailwind v4 核心 */
+@import "tailwindcss";
+
+/* 基础页面重置：温暖的沙石底色与深灰文字 */
+body {
+  background-color: #f5f5f4; 
+  color: #1c1917; 
+}

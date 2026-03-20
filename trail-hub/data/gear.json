@@ -1,0 +1,12 @@
+[
+  { "id": "hoka-speedgoat-5", "brand": "HOKA", "model": "Speedgoat 5", "weight_g": 291, "grip_level": 4, "cushioning": 5, "protection": 4, "drop_mm": 4, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=HOKA%5CnSpeedgoat+5" },
+  { "id": "salomon-genesis", "brand": "Salomon", "model": "S/Lab Genesis", "weight_g": 258, "grip_level": 4, "cushioning": 4, "protection": 5, "drop_mm": 8, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Salomon%5CnS/Lab+Genesis" },
+  { "id": "nnormal-kjerag", "brand": "NNormal", "model": "Kjerag", "weight_g": 200, "grip_level": 4, "cushioning": 3, "protection": 3, "drop_mm": 6, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=NNormal%5CnKjerag" },
+  { "id": "lasportiva-cyklon", "brand": "La Sportiva", "model": "Cyklon", "weight_g": 310, "grip_level": 5, "cushioning": 3, "protection": 5, "drop_mm": 8, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=La+Sportiva%5CnCyklon" },
+  { "id": "altra-lonepeak7", "brand": "Altra", "model": "Lone Peak 7", "weight_g": 314, "grip_level": 3, "cushioning": 3, "protection": 3, "drop_mm": 0, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Altra%5CnLone+Peak+7" },
+  { "id": "saucony-peregrine13", "brand": "Saucony", "model": "Peregrine 13", "weight_g": 260, "grip_level": 5, "cushioning": 3, "protection": 4, "drop_mm": 4, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Saucony%5CnPeregrine+13" },
+  { "id": "brooks-cascadia17", "brand": "Brooks", "model": "Cascadia 17", "weight_g": 311, "grip_level": 4, "cushioning": 4, "protection": 5, "drop_mm": 8, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Brooks%5CnCascadia+17" },
+  { "id": "nike-pegasus-trail4", "brand": "Nike", "model": "Pegasus Trail 4", "weight_g": 295, "grip_level": 2, "cushioning": 4, "protection": 2, "drop_mm": 9, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Nike%5CnPegasus+Trail+4" },
+  { "id": "arcteryx-sylan", "brand": "Arc'teryx", "model": "Sylan", "weight_g": 292, "grip_level": 5, "cushioning": 4, "protection": 4, "drop_mm": 6, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Arc'teryx%5CnSylan" },
+  { "id": "kailas-fuga-ex3", "brand": "Kailas", "model": "Fuga EX 3", "weight_g": 285, "grip_level": 4, "cushioning": 5, "protection": 4, "drop_mm": 8, "image": "https://placehold.co/400x400/f5f5f4/1c1917?text=Kailas%5CnFuga+EX+3" }
+]
