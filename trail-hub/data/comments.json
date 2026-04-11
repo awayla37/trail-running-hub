@@ -1,0 +1,20 @@
+[
+  {
+    "id": "c1",
+    "target_id": "dajingmen-utmb",
+    "user": "Ayla_Runner",
+    "tag": "赛道建议",
+    "content": "如果你跑 100km 组别，凌晨过长城遗址时风极大，建议皮肤风衣外面再加一层薄保暖。",
+    "likes": 24,
+    "timestamp": "2026-04-10"
+  },
+  {
+    "id": "c2",
+    "target_id": "hoka-speedgoat-5",
+    "user": "TrailMaster",
+    "tag": "装备实测",
+    "content": "在大境门的喀斯特地貌上，这款鞋的 Vibram 大底磨损比想象中快，但抓地确实稳。",
+    "likes": 15,
+    "timestamp": "2026-04-09"
+  }
+]
